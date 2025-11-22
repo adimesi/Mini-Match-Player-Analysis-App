@@ -113,10 +113,6 @@ const PlayerDetail = () => {
           <h3>Skill Radar</h3>
           <RadarChart labels={labels} values={values} size={320} maxValue={100} />
         </div>
-        <div className="radar-card">
-          <h3>Notes</h3>
-          <p className="muted">Values shown are taken from local data when available, otherwise mocked defaults are used.</p>
-        </div>
         <div className="matches-card">
           <h3>Matches</h3>
           <table className="matches-table">
