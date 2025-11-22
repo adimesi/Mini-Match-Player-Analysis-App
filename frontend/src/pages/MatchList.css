@@ -1,0 +1,216 @@
+/* Main Container */
+.match-list-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+/* Blue Header Bar */
+.match-header {
+  background-color: #2c4a8c; /* The specific blue from your screenshot */
+  color: white;
+  padding: 15px 20px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.nav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* The White List Box */
+.match-table {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-top: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Individual Match Row */
+.match-row {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+
+.match-row:last-child {
+  border-bottom: none;
+}
+
+.match-row:hover {
+  background-color: #f9fafb;
+}
+
+/* Column 1: Date & Time */
+.date-column {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9rem;
+}
+
+.match-date {
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.match-time {
+  color: #9ca3af;
+  font-size: 0.85rem;
+}
+
+/* Column 2: The Matchup (Home - Score - Away) */
+.matchup-column {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-cell {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.team-cell.home {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.team-cell.away {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.team-name {
+  font-weight: 700;
+  color: #1f2937;
+  font-size: 0.95rem;
+}
+
+.team-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.score-badge {
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  color: #374151;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 6px;
+  margin: 0 15px;
+  min-width: 60px;
+  text-align: center;
+}
+
+/* Column 3: Stadium */
+.stadium-column {
+  width: 200px;
+  color: #9ca3af;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 15px;
+}
+
+/* Column 4: Actions */
+.actions-column {
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.details-link {
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.details-link:hover {
+  text-decoration: underline;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.video-icon {
+  color: #374151;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.video-icon:hover {
+  color: #dc2626; /* Red on hover */
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .match-row {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .date-column, .stadium-column, .actions-column {
+    width: 100%;
+    text-align: center;
+  }
+
+  .matchup-column {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .team-name {
+    display: none; /* Hide names on very small screens if needed */
+  }
+  
+  .stadium-column {
+    display: none; /* Hide stadium on mobile to save space */
+  }
+}
