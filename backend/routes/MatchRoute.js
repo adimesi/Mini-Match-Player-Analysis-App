@@ -6,8 +6,6 @@ dotenv.config();
 
 const USER_TOKEN = process.env.USER_TOKEN;
 
-
-
 const EASYCOACH_MATCHES_API_URL = process.env.EASYCOACH_MATCHES_API_URL;
 router.get('/', async (req, res) => {
     try {
