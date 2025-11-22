@@ -1,4 +1,4 @@
-# EasyCoach (local copy)
+# EasyCoach
 
 This repository contains a small full-stack React + Express example used for match details, players and events. The frontend consumes a local JSON for player/event breakdowns and can call the backend to fetch match metadata/video URLs.
 
@@ -51,10 +51,3 @@ Frontend:
 cd .\frontend
 npm start
 ```
-
-Notes
-- The frontend uses a local JSON (`frontend/src/data/...`) for player/events when remote APIs aren’t available.
-- The backend is a simple proxy; if env vars are missing, proxy requests to external services will fail.
-- No database is required to run the example.
-
-Want shortcuts? I can add `start` scripts to `backend/package.json` or a small helper to launch both services.
