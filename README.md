@@ -14,6 +14,7 @@ From the project root (PowerShell):
 
 ```powershell
 cd .\backend
+```
 # EasyCoach — local development copy
 
 EasyCoach — Quick start
