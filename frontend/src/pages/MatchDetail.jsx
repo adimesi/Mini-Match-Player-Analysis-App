@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { getMatchDetails  } from '../services/matchApi.js';
 import ReactHlsPlayer from 'react-hls-player'; 
 import { X, Calendar, Clock, MapPin } from 'lucide-react';
-import './MatchDetails.css';
+import './MatchDetail.css';
 import breakdown_game_1061429_league_726 from '../data/breakdown_game_1061429_league_726.json';
 import PlayersTable from '../components/PlayersTable.jsx';
 
